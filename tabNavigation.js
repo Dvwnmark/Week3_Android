@@ -40,8 +40,21 @@ const screenOptions = {
       
                 }}
               />
+                <Tab.Screen
+                  name='Bai2'
+                  component={Bai2}
+                  options={{
+                    tabBarIcon:({focused})=>{
+                      const textColor = focused ? "#204c8b" : "#bababa";
+                      return(
+                        <View style={{alignItems:"center", justifyContent:"center"}}>
+                            <Text style={{ fontSize:12,color: textColor, fontWeight:"bold" }}>Bai2</Text>
 
-             
+                        </View>
+                      )
+                    }
+                  }}
+                />
 
               
                 </Tab.Navigator>
