@@ -10,11 +10,11 @@ silver:
 
 red:
 
-![Alt text](image-1.png)
+![]()
 
 black:
 
-![Alt text](image-2.png)
+!["./ReadmeImage/black.png"]
 
 blue:
 
