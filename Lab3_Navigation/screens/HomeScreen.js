@@ -4,7 +4,6 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 
 export default function HomeScreen({navigation, route}){
-    console.log(route.params);
 
     const image = route.params?.image?? require("../assets/vs_blue.png");
     return(
