@@ -10,9 +10,9 @@ export default function App() {
   return (
   <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Screen name= "Page1" component={Page1} options={{headerShown:true}}/> 
-      <Stack.Screen name= "Page2" component={Page2} options={{headerShown:true,headerTitle:"The world's Best Bike",headerTitleStyle:{fontSize:19,color:"red",fontWeight:"bold"}}}/>
-      <Stack.Screen name= "Page3" component={Page3}options={{headerShown:true}}/>
+      <Stack.Screen name= "Page1" component={Page1} options={{headerShown:false}}/> 
+      <Stack.Screen name= "Page2" component={Page2} options={{headerShown:false,headerTitle:"The world's Best Bike",headerTitleStyle:{fontSize:19,color:"red",fontWeight:"bold"}}}/>
+      <Stack.Screen name= "Page3" component={Page3}options={{headerShown:false}}/>
     </Stack.Navigator>
   </NavigationContainer>
   );

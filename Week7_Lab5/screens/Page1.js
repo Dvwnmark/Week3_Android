@@ -9,10 +9,13 @@ export default function Page1({navigation}){
         <View style={styles.image}>
             <Image style={styles.mainImg} resizeMode="contain" source={require('../assets/bifour_-removebg-preview.png')}/>
         </View>
+
             <Text style={styles.textLabel1}>POWER BIKE SHOP</Text>
+
         <TouchableOpacity style={styles.submit} onPress={()=>{navigation.navigate("Page2")}}>
             <Text style={styles.textSubmit}>Get Started</Text>
         </TouchableOpacity>
+        
         </View>
     )
 }
@@ -25,12 +28,12 @@ const styles = StyleSheet.create({
         backgroundColor:"white"
     },
     textLabel:{
-        fontSize:23,
+        fontSize:25,
         fontWeight:"bold",
         textAlign:"center",
         width:"90%",
-        margin:13,
-        fontStyle:"normal"
+        marginTop:45,
+        
     },
     image:{
         width:"95%",
