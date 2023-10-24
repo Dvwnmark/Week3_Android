@@ -7,7 +7,7 @@ List Screen :
 
 ![Alt text](readmeimg/listproduct.png)
 
-![Alt text](readmeimg/listproduct2.png.png)
+![Alt text](readmeimg/listproduct2.png)
 
 ![Alt text](readmeimg/listproduct3.png)
 
