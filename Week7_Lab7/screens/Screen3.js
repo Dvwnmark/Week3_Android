@@ -8,7 +8,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 export default function Screen3({navigation,route}){
     const {email, item, data, update} =route.params;
     console.log(item);
-    const [toDoNew, setToDoNew] = useState(item? item:"");
+    const [toDoNew, setToDoNew] = useState(item ? item: "");
 
     function addTextToUserById(userId, newText){
         fetch(`https://6544ab0b5a0b4b04436caf78.mockapi.io/api/ToDo/${userId}`,{
@@ -31,7 +31,7 @@ export default function Screen3({navigation,route}){
         });
     }
     const handleHome =() => {
-        navigation.navigate("Screen2",{email,data,update});
+        navigation.navigate("Screen2",{email,data,update})
     }
     return(
         <View style={styles.container}>
@@ -56,9 +56,17 @@ export default function Screen3({navigation,route}){
                 <TextInput style={{marginLeft:15,width:"80%",height:"80%",fontSize:18}} value={toDoNew} onChangeText={setToDoNew} placeholder="Input Your Job"/>
             </View>
             
-            <Pressable onPress={addTextToUserById(data.id,toDoNew)} style={{marginTop:20}}>
-                <Text>Finish</Text>
+            <Pressable style={{marginTop:20,width:"50%",height:45,backgroundColor:"#00bdd5",borderRadius:10,justifyContent:"center",alignItems:"center",flexDirection:"row"}}>
+                <Text style={{fontSize:18,fontWeight:"bold",color:"white"}}>FINISH</Text>
+                <AntDesign name="arrowright" size={24} color="white" />
             </Pressable>
+
+            <Pressable onPress={()=>{navigation.navigate("Screen1", {email, data, update})}} style={{ marginTop: 20, width: 100, height: 45, backgroundColor: "#00bdd5", borderRadius: 10, justifyContent: "center", alignItems: "center", flexDirection: "row" }}>
+                <Text style={{ fontSize: 18, fontWeight: "bold", color: "#fff" }}>HOME</Text>
+                <AntDesign name="arrowright" size={24} color="#fff" />
+            </Pressable>
+
+            <Image style ={{width:"75%",height:"38%"}} resizeMode="contain" source={require("../assets/image.png")}/>
         </View>
     )
 }
