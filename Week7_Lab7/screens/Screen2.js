@@ -2,45 +2,46 @@ import { useEffect, useState } from "react";
 import { Image, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { AntDesign } from '@expo/vector-icons'; 
 import { Entypo } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function Screen2({navigation,route}){
-    const [toDo,setTodo] = useState([]);
-    const {email} = route.params;
+    const [toDo, setToDo] = useState([]);
     const [data, setData] = useState([]);
     const [update, setUpdate] = useState(0);
-    const [search, setSearch]= useState('');
+    const { email } = route.params;
+    const [search, setSearch] = useState('');
 
-    useEffect(()=>{
-        fetch("https://6544ab0b5a0b4b04436caf78.mockapi.io/api/ToDo")
-        .then((response)=>response.json())
-        .then(data =>{
-            const username1Data = data.find(item => item.name === email);
-            setTodo(username1Data.text);
-            setData(username1Data);
-            setData(username1Data);
-            if (username1Data) {
-                const textArray = username1Data.text;
-                console.log(textArray);
-                update=0;
-            }else{
-                console.log("No data 'username1'");
-            }
-                
+    useEffect(() => {
+        fetch("https://65473b94902874dff3ac0e68.mockapi.io/api/ToDo")
+            .then(response => response.json())
+            .then(data => {
+                const username1Data = data.find(item => item.name === email);
+                setToDo(username1Data.text);
+                setData(username1Data);
+                if (username1Data) {
+                    const textArray = username1Data.text;
+                    console.log(textArray);
+                    update = 0;
+                } else {
+                    console.log("Không tìm thấy dữ liệu cho 'username1'");
+                }
             })
-            .catch((error)=>{
-                console.error("Lỗi lấy dữ liệu:",error);
-        });
-    },[route.params.update]);
+            .catch(error => {
+                console.error("Đã xảy ra lỗi khi lấy dữ liệu:", error);
+            });
+    }, [route.params.update]);
 
-    useEffect(()=>{
+    useEffect(() => {
         if (search === "") {
-            setTodo(toDo)
-        } else{
+            setToDo(toDo)
+        } else {
             const filtered = toDo.filter(item => item.text.toLowerCase().includes(search.toLowerCase()));
-            setTodo(filtered);
-        }    
-    },[search]);
-    console.log(toDo);
+            setToDo(filtered);
+        }
+    }, [search]);
+
+
+    console.log(toDo)
     
     return(
         <View style={styles.container}>
