@@ -37,10 +37,10 @@ export default function Details({navigation, route}){
                     </Pressable>
                 </View>
             </View>
-            <View style={{width:"100%",paddingHorizontal:15, marginTop:25}}>
+            <View style={{width:"100%",paddingHorizontal:15, marginTop:50}}>
                 <Text style={{fontSize:25, fontWeight:"bold"}}>Restaurant info</Text>
                 <Text style={{fontSize:16, fontWeight:"bold",opacity:0.6}}>Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range.</Text>
-                <Pressable onPress={()=>{navigation.navigate("Home")}} style={{width:"100%", borderRadius:10,alignItems:"center",justifyContent:"center",marginTop:25,height:"19%",backgroundColor:"#f1b000",marginTop:61}}>
+                <Pressable onPress={()=>{navigation.navigate("Home")}} style={{width:"100%", borderRadius:10,alignItems:"center",justifyContent:"center",height:"19%",backgroundColor:"#f1b000",marginTop:61}}>
                     <Text style={{fontSize:21,fontWeight:"bold",color:"white"}}>Add to cart</Text>
                 </Pressable>
             </View>
@@ -53,5 +53,6 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor:"#fff",
         alignItems:"center",
+        marginVertical:50
     },
 })
