@@ -1,0 +1,5 @@
+![Alt text](./readmeimg/homescreen.png)
+![Alt text](./readmeimg/pink.png)
+![Alt text](./readmeimg/floating.png)
+![Alt text](./readmeimg/details.png)
+![Alt text](./readmeimg/floatingdetails.png)
